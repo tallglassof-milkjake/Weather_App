@@ -18,8 +18,9 @@ $(document).ready(function() {
             let celsius = response.main.temp.toFixed(2);
 
             let currentWeatherDiv = $('#current-weather');
-            currentWeatherDiv.append('<h1 class="display-1 pl-5">' + response.name + '</h1>');
-            currentWeatherDiv.append('<h2 class="display-4 pl-5">' + celsius + '</h2>');
+            
+            currentWeatherDiv.append('<h1 class="display-3">' + response.name + '</h1>');
+            currentWeatherDiv.append('<p class="lead">Temperature: ' + celsius + '</p>');
         });
     
         
