@@ -10,10 +10,10 @@ body {
     background-color: #536EE0;
 }
 
-h1 {
+.header {
     color: white;
 }
 
-.side-line {
-    background-color: #E05226;
+.sidebar {
+    height: 100%;
 }
