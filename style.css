@@ -1,20 +1,60 @@
-body {
+body, html {
     font-family: 'Noto Sans HK', sans-serif;
+    height: 100%;
 }
 
 .fa-umbrella-beach {
     color: #8BE03C;
 }
 
-.navbar {
-    background-color: #536EE0;
-}
-
 .header {
     color: white;
 }
 
-.sidebar {
-    height: 100%;
+.container-fluid {
+    padding: 0 0 0 0 !important;
 }
 
+.sidebar {
+    height: 100%;
+    background-repeat: repeat-y;
+    text-align: center;
+}
+
+hr {
+    width: 70%;
+}
+
+#sideBarBtn {
+    display: inline-block;
+    margin: .5em 1em .5em 1em;
+}
+
+.cityForm {
+    padding: .5em 1em .5em 1em;
+    justify-content: center;
+}
+
+.weathercol {
+    width: 70%;
+}
+
+.weatherrow {
+    width: 70%;
+}
+
+.weatherToday {
+    padding: 2em 3em 2em 3em;
+    width: 50%;
+    margin-right: 0;
+    
+}
+
+.weatherForecast {
+    justify-items: center;
+    text-align: center;
+}
+
+.forecast1, .forecast2, .forecast3, .forecast4, .forecast5 {
+    margin: 1em 2em 1em 2em;
+}

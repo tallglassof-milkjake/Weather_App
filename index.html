@@ -19,36 +19,55 @@
     <!--NavBar (using as a header only until smaller screen sizes-->
     <!-- Image and text -->
     
-    <nav class="navbar navbar-light bg-dark">
-        <h1 class="display-3 header">
+    <nav class="navbar navbar-light bg-dark justify-content-center">
+        <h1 class="display-4 header">
             <i class="fas fa-umbrella-beach"></i>
             Weather
         </h1>
     </nav>
 
-    <div class="container-fluid">
-        <div class="row">
-            <nav class="col-3 d-block bg-light sidebar">
-                <div class="sidebar-sticky">
-                    <form class="form-inline my-3">
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <nav class="col-3 sidebar">
+                <div class="sidebar bg-light">
+                    <form class="form-inline cityForm">
+                        <h2>Your City</h2>
                         <input class="form-control mr-sm-2" id="my-location" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success my-2 my-sm-0" id="submitBtn" type="submit">Search</button>
                       </form>
+                      <hr>
                       <div id="sidebar">
                           
                       </div>
                 </div>
             </nav>
-            <main>
-                <div class="row">
-                        <div class="card" id="current-weather">
+            
+                <div class="row weatherrow">
+                    <div class="col-8 weathercol">
+                        <div class="weatherToday" id="current-weather">
                             
-                          </div>
-                </div>
-                <div class="row" id="forecast-div">
+                        </div>
+                    </div>
+                    <div class="row weatherForecast" id="forecast-div">
+                        <div class="col forecast1">
     
+                        </div>
+                        <div class="col forecast2">
+    
+                        </div>
+                        <div class="col forecast3">
+    
+                        </div>
+                        <div class="col forecast4">
+    
+                        </div>
+                        <div class="col forecast5">
+    
+                        </div>
+                    </div>
                 </div>
-            </main>
+                
+            
         </div>
     </div>
 
@@ -64,8 +83,8 @@
     
     
     
-
-
+    <!--Moment.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js" integrity="sha512-Izh34nqeeR7/nwthfeE0SI3c8uhFSnqxV0sI9TvTcXiFJkMd6fB644O64BRq2P/LA/+7eRvCw4GmLsXksyTHBg==" crossorigin="anonymous"></script>
     
     <!--jQuery-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
