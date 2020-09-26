@@ -13,11 +13,11 @@ body, html {
 
 .container-fluid {
     padding: 0 0 0 0 !important;
+    margin: 0 0 0 0 !important;
 }
 
 .sidebar {
     height: 100%;
-    background-repeat: repeat-y;
     text-align: center;
 }
 
@@ -40,14 +40,17 @@ hr {
 }
 
 .weatherrow {
-    width: 70%;
+    display: flex;
+    width: 75%;
+    margin-right: 0;
 }
 
 .weatherToday {
     padding: 2em 3em 2em 3em;
-    width: 50%;
-    margin-right: 0;
-    
+    width: 60%;
+    margin: 2em 0 2em 0;
+    background-color: #707070;
+    border-radius: 25px;
 }
 
 .weatherForecast {
@@ -55,6 +58,33 @@ hr {
     text-align: center;
 }
 
-.forecast1, .forecast2, .forecast3, .forecast4, .forecast5 {
-    margin: 1em 2em 1em 2em;
+#forecast1, #forecast2, #forecast3, #forecast4, #forecast5 {
+    min-width: 16em;  
+    background-color: #707070;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-left: 1em;
+    border-radius: 25px;
+}
+
+#forecast1 {
+    min-width: 16em;  
+    background-color: #707070;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-left: 2em;
+}
+
+h1, h3, p {
+    color: white;
+}
+
+small {
+    color: #B4B4B4;
+}
+
+.UVstatus {
+    height: 50px;
+    width: 150px;
+    border-radius: 50px;
 }

@@ -32,8 +32,9 @@
                 <div class="sidebar bg-light">
                     <form class="form-inline cityForm">
                         <h2>Your City</h2>
-                        <input class="form-control mr-sm-2" id="my-location" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" id="submitBtn" type="submit">Search</button>
+                        <hr>
+                        <input class="form-control mr-sm-2" id="my-location" type="search" onfocus="this.value=''" value="Search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-primary my-2 my-sm-0" id="submitBtn" type="submit">Search</button>
                       </form>
                       <hr>
                       <div id="sidebar">
@@ -43,25 +44,25 @@
             </nav>
             
                 <div class="row weatherrow">
-                    <div class="col-8 weathercol">
+                    <div class="col weathercol">
                         <div class="weatherToday" id="current-weather">
                             
                         </div>
                     </div>
                     <div class="row weatherForecast" id="forecast-div">
-                        <div class="col forecast1">
+                        <div class="col forecast-card" id="forecast1">
     
                         </div>
-                        <div class="col forecast2">
+                        <div class="col forecast-card" id="forecast2">
     
                         </div>
-                        <div class="col forecast3">
+                        <div class="col forecast-card" id="forecast3">
     
                         </div>
-                        <div class="col forecast4">
+                        <div class="col forecast-card" id="forecast4">
     
                         </div>
-                        <div class="col forecast5">
+                        <div class="col forecast-card" id="forecast5">
     
                         </div>
                     </div>
