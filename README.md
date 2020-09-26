@@ -2,7 +2,8 @@
 
 This simple weather application is designed to give the user the ability to search for the weather in any city in the world and get current temperature, "feels like temperature" humidity, wind speeds and UV index as well as an easy to read 5 day forecast. All information requested from [openweathermap](https://openweathermap.org/)
 
-The added addition of the weather icons from the [openweathermap](https://openweathermap.org/) makes for an easier and quicker to read application.
+The added addition of the weather icons from the [openweathermap](https://openweathermap.org/) makes for an easier and quicker to read application. 
+Using the [UV Index](https://openweathermap.org/api/uvi) API a small coloured div was added underneath the current weather data that is respondant to the UV index rating according to the colour coding on [Ultraviolet Index Wikipedia](https://en.wikipedia.org/wiki/Ultraviolet_index)
 
 ![Weather App](Assets/Current.png)
 
