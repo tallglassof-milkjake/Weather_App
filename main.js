@@ -15,8 +15,8 @@ $(document).ready(function() {
 
             // All items for calling from open weather and printing results in the main section except UV
             let locationQuery = $('#my-location').val();
-            let queryUrlForecast = 'http://api.openweathermap.org/data/2.5/forecast?q=' + locationQuery + '&appid=6d2aa3e12929722f96b5f0c1ddfc3d7e';
-            let queryUrl = 'http://api.openweathermap.org/data/2.5/weather?q=' + locationQuery + '&appid=6d2aa3e12929722f96b5f0c1ddfc3d7e';
+            let queryUrlForecast = 'https://api.openweathermap.org/data/2.5/forecast?q=' + locationQuery + '&appid=6d2aa3e12929722f96b5f0c1ddfc3d7e';
+            let queryUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + locationQuery + '&appid=6d2aa3e12929722f96b5f0c1ddfc3d7e';
             
             //Empty previous searches
             currentWeatherDiv.empty();
@@ -49,7 +49,7 @@ $(document).ready(function() {
                 //Appending Current weather details to HTML
                 currentWeatherDiv.append('<h1 class="display-3" id="weather-header">' + cityName + ' </h1>');
                 $('#weather-header').append('<small class="">' + response.weather[0].description + '</small><br>');
-                $('#weather-header').append('<img src="http://openweathermap.org/img/wn/' + response.weather[0].icon + '@2x.png">');
+                $('#weather-header').append('<img src="https://openweathermap.org/img/wn/' + response.weather[0].icon + '@2x.png">');
                 currentWeatherDiv.append('<p class="lead"><b>Temperature:</b> ' + celsius + '&#8451</p>');
                 currentWeatherDiv.append('<p class="lead"><b>Feels Like:</b> ' + feelsLikeCelsius + '&#8451</p>');
                 currentWeatherDiv.append('<p class="lead"><b>Humidity:</b> ' + cityHumidity + '%</p>');
@@ -65,7 +65,7 @@ $(document).ready(function() {
                 let lon = response.coord.lon
 
                 //Query for getting UV rating (needs to be within primary function to get latitude and longitude)
-                let queryUV = 'http://api.openweathermap.org/data/2.5/uvi?lat=' + lat + '&lon=' + lon + '&appid=6d2aa3e12929722f96b5f0c1ddfc3d7e';
+                let queryUV = 'https://api.openweathermap.org/data/2.5/uvi?lat=' + lat + '&lon=' + lon + '&appid=6d2aa3e12929722f96b5f0c1ddfc3d7e';
                 //Try an ajax within an ajax for callig uv data using weather city longitude and latitude
                 $.ajax({
                     url: queryUV,
@@ -112,28 +112,28 @@ $(document).ready(function() {
                     
                     //Appending each card with forecast day/date, forecast icon, temperature and humidity
                     $('#forecast1').append('<h3>' + today + '</h3>');
-                    $('#forecast1').append('<img src="http://openweathermap.org/img/wn/' + response.list[0].weather[0].icon + '@2x.png">');
+                    $('#forecast1').append('<img src="https://openweathermap.org/img/wn/' + response.list[0].weather[0].icon + '@2x.png">');
                     $('#forecast1').append('<p class="lead"><b>Temp:</b> ' + todayTemp.toFixed(2) + '&#8451</p>');
                     $('#forecast1').append('<p class="lead"><b>Humidity:</b> ' + response.list[0].main.humidity + '%</p>');
 
         
                     $('#forecast2').append('<h3>' + tomorrow + '</h3>');
-                    $('#forecast2').append('<img src="http://openweathermap.org/img/wn/' + response.list[8].weather[0].icon + '@2x.png">');
+                    $('#forecast2').append('<img src="https://openweathermap.org/img/wn/' + response.list[8].weather[0].icon + '@2x.png">');
                     $('#forecast2').append('<p class="lead"><b>Temp:</b> ' + tomorrowTemp.toFixed(2) + '&#8451</p>');
                     $('#forecast2').append('<p class="lead"><b>Humidity:</b> ' + response.list[8].main.humidity + '%</p>');
         
                     $('#forecast3').append('<h3>' + theDayAfter + '</h3>');
-                    $('#forecast3').append('<img src="http://openweathermap.org/img/wn/' + response.list[16].weather[0].icon + '@2x.png">');
+                    $('#forecast3').append('<img src="https://openweathermap.org/img/wn/' + response.list[16].weather[0].icon + '@2x.png">');
                     $('#forecast3').append('<p class="lead"><b>Temp:</b> ' + theDayAfterTemp.toFixed(2) + '&#8451</p>');
                     $('#forecast3').append('<p class="lead"><b>Humidity:</b> ' + response.list[16].main.humidity + '%</p>');
         
                     $('#forecast4').append('<h3>' + theDayAfterThat + '</h3>');
-                    $('#forecast4').append('<img src="http://openweathermap.org/img/wn/' + response.list[24].weather[0].icon + '@2x.png">');
+                    $('#forecast4').append('<img src="https://openweathermap.org/img/wn/' + response.list[24].weather[0].icon + '@2x.png">');
                     $('#forecast4').append('<p class="lead"><b>Temp:</b> ' + theDayAfterNextTemp.toFixed(2) + '&#8451</p>');
                     $('#forecast4').append('<p class="lead"><b>Humidity:</b> ' + response.list[24].main.humidity + '%</p>');
         
                     $('#forecast5').append('<h3>' + theNextDayAfterThat + '</h3>');
-                    $('#forecast5').append('<img src="http://openweathermap.org/img/wn/' + response.list[32].weather[0].icon + '@2x.png">');
+                    $('#forecast5').append('<img src="https://openweathermap.org/img/wn/' + response.list[32].weather[0].icon + '@2x.png">');
                     $('#forecast5').append('<p class="lead"><b>Temp:</b> ' + theNextDayAfterThatTemp.toFixed(2) + '&#8451</p>');
                     $('#forecast5').append('<p class="lead"><b>Humidity:</b> ' + response.list[32].main.humidity + '%</p>');
         
@@ -147,8 +147,8 @@ $(document).ready(function() {
                 console.log('ITS CLICKED');
         
                 historyBTN = $('#sideBarBtn').text();
-                let queryUrl = 'http://api.openweathermap.org/data/2.5/weather?q=' + historyBTN + '&appid=6d2aa3e12929722f96b5f0c1ddfc3d7e';
-                let queryUrlForecast = 'http://api.openweathermap.org/data/2.5/forecast?q=' + historyBTN + '&appid=6d2aa3e12929722f96b5f0c1ddfc3d7e';
+                let queryUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + historyBTN + '&appid=6d2aa3e12929722f96b5f0c1ddfc3d7e';
+                let queryUrlForecast = 'https://api.openweathermap.org/data/2.5/forecast?q=' + historyBTN + '&appid=6d2aa3e12929722f96b5f0c1ddfc3d7e';
         
                 console.log(historyBTN);
         
@@ -189,7 +189,7 @@ $(document).ready(function() {
                     let lon = response.coord.lon
         
                     //Query for getting UV rating (needs to be within primary function to get latitude and longitude)
-                    let queryUV = 'http://api.openweathermap.org/data/2.5/uvi?lat=' + lat + '&lon=' + lon + '&appid=6d2aa3e12929722f96b5f0c1ddfc3d7e';
+                    let queryUV = 'https://api.openweathermap.org/data/2.5/uvi?lat=' + lat + '&lon=' + lon + '&appid=6d2aa3e12929722f96b5f0c1ddfc3d7e';
                     //Try an ajax within an ajax for callig uv data using weather city longitude and latitude
                     $.ajax({
                         url: queryUV,
@@ -241,25 +241,25 @@ $(document).ready(function() {
                         let theNextDayAfterThatTemp = response.list[32].main.temp -273.25;
             
                         $('#forecast1').append('<h3>' + today + '</h3>');
-                        $('#forecast1').append('<img src="http://openweathermap.org/img/wn/' + response.list[0].weather[0].icon + '@2x.png">');
+                        $('#forecast1').append('<img src="https://openweathermap.org/img/wn/' + response.list[0].weather[0].icon + '@2x.png">');
                         $('#forecast1').append('<p class="lead"><b>Temp:</b> ' + todayTemp.toFixed(2) + '&#8451</p>');
             
                         console.log(response.list[0].weather[0].icon);
             
                         $('#forecast2').append('<h3>' + tomorrow + '</h3>');
-                        $('#forecast2').append('<img src="http://openweathermap.org/img/wn/' + response.list[8].weather[0].icon + '@2x.png">');
+                        $('#forecast2').append('<img src="https://openweathermap.org/img/wn/' + response.list[8].weather[0].icon + '@2x.png">');
                         $('#forecast2').append('<p class="lead"><b>Temp:</b> ' + tomorrowTemp.toFixed(2) + '&#8451</p>');
             
                         $('#forecast3').append('<h3>' + theDayAfter + '</h3>');
-                        $('#forecast3').append('<img src="http://openweathermap.org/img/wn/' + response.list[16].weather[0].icon + '@2x.png">');
+                        $('#forecast3').append('<img src="https://openweathermap.org/img/wn/' + response.list[16].weather[0].icon + '@2x.png">');
                         $('#forecast3').append('<p class="lead"><b>Temp:</b> ' + theDayAfterTemp.toFixed(2) + '&#8451</p>');
             
                         $('#forecast4').append('<h3>' + theDayAfterThat + '</h3>');
-                        $('#forecast4').append('<img src="http://openweathermap.org/img/wn/' + response.list[24].weather[0].icon + '@2x.png">');
+                        $('#forecast4').append('<img src="https://openweathermap.org/img/wn/' + response.list[24].weather[0].icon + '@2x.png">');
                         $('#forecast4').append('<p class="lead"><b>Temp:</b> ' + theDayAfterNextTemp.toFixed(2) + '&#8451</p>');
             
                         $('#forecast5').append('<h3>' + theNextDayAfterThat + '</h3>');
-                        $('#forecast5').append('<img src="http://openweathermap.org/img/wn/' + response.list[32].weather[0].icon + '@2x.png">');
+                        $('#forecast5').append('<img src="https://openweathermap.org/img/wn/' + response.list[32].weather[0].icon + '@2x.png">');
                         $('#forecast5').append('<p class="lead"><b>Temp:</b> ' + theNextDayAfterThatTemp.toFixed(2) + '&#8451</p>');
             
                     });
